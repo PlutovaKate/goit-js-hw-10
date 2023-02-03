@@ -12,9 +12,35 @@ body {
   line-height: 1.5;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 10px;
+}
+
+li{
+  padding-bottom: 10px;
+  padding-left: 10px;
+  list-style: none;
+}
+
 #search-box {
   font: inherit;
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+#search-box:hover,
+#search-box:focus,
+#search-box:active {
+  border-color: #181eca;
+}
+
+.country__name{
+  font-size: 36px;
+  font-style: italic;
+  margin: 0;
 }
