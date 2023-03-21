@@ -35,6 +35,7 @@ function handleSearchInput(event) {
       if (data.length === 1) {
         renderOneCountry(data);
       }
+      
     })
     .catch(error => {
       Notiflix.Notify.failure('Oops, there is no country with that name');
@@ -54,7 +55,10 @@ function renderCountriesList(countries) {
   countriesList.innerHTML = markup;
 }
 
+
+
 function renderOneCountry(countries) {
+
   const markup = countries
     .map(country => {
       return `<li>
@@ -64,7 +68,7 @@ function renderOneCountry(countries) {
        <b>${country.name.official}</b></p>
           <p><b>Capital</b>: ${country.capital}</p>
           <p><b>Population</b>: ${country.population}</p>
-          <p><b>Languages</b>: ${Object.values(country.languages)}</p>
+          <p><b>Languages</b>: ${Object.values(country.languages).join(', ')}</p>
               </li>`;
     })
     .join('');
